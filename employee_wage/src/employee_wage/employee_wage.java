@@ -11,6 +11,10 @@ final int is_part_time=2;
  int rate_per_hr =20;
 int emp_hrs=0;
 int emp_wage=0;
+int no_of_working_days=20;
+int total_wage=0;
+for(int day=0;day<no_of_working_days;day++)
+{
 int empCheck=(int) (Math.floor(Math.random()*10)%3);
 switch (empCheck) {
 case  IS_FULL_TIME: emp_hrs=16;break;
@@ -19,8 +23,9 @@ default: emp_hrs=0;
 }
 
 emp_wage=emp_hrs*rate_per_hr ;
-			
-	System.out.println("Employee wage is "+emp_wage);
+total_wage+=emp_wage;
+}			
+	System.out.println("Employee wage is "+total_wage);
 	
 	}
 
